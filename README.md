@@ -43,7 +43,7 @@ python 05_executar_condicoes.py    # 10 a 20 min em 2 núcleos
 python 06_analisar.py
 python 08_analises_complementares.py
 python 09_analises_complementares_v2.py
-python 10_analises_banca.py         # A7–A9: kernel do LIME, fidelidade, Random Forest
+python 10_analises_complementares_v3.py         # A7–A9: kernel do LIME, fidelidade, Random Forest
 python 07_figuras.py
 ```
 
