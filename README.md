@@ -43,6 +43,7 @@ python 05_executar_condicoes.py    # 10 a 20 min em 2 núcleos
 python 06_analisar.py
 python 08_analises_complementares.py
 python 09_analises_complementares_v2.py
+python 10_analises_banca.py         # A7–A9: kernel do LIME, fidelidade, Random Forest
 python 07_figuras.py
 ```
 
@@ -58,7 +59,7 @@ acima de 25 MB pelo navegador. A etapa 5 gera o arquivo de novo.
 | `dados/` | PIMA Indians Diabetes Dataset (768 registros, 8 atributos) |
 | `config.json` | Todos os parâmetros do protocolo |
 | `xai_estab.py` | Funções comuns: perturbação, explicadores, métricas, testes |
-| `01` a `09` | Etapas do pipeline, na ordem acima |
+| `01` a `10` | Etapas do pipeline, na ordem acima |
 | `intermediarios/` | Divisão, imputação, hiperparâmetros, piloto |
 | `resultados/` | Saídas, tabelas e figuras do artigo |
 | `README_pacote.md` | Documentação completa, com a correspondência entre cada número do artigo e o arquivo que o gera |
