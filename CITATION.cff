@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Se usar este código, cite o trabalho abaixo."
+title: "Estabilidade e robustez das explicações de SHAP e LIME na classificação do diabetes mellitus: revisão estruturada da literatura e estudo experimental com o conjunto PIMA"
+type: software
+authors:
+  - family-names: "Pessoa Cunha"
+    given-names: "Maria Júlia"
+license: MIT
+date-released: "2026-11-30"

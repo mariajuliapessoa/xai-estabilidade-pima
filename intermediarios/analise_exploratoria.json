@@ -1,0 +1,110 @@
+{
+  "arquivo_sha256": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+  "n_registros": 768,
+  "classes": {
+    "0": 500,
+    "1": 268
+  },
+  "zeros_por_atributo": {
+    "Pregnancies": 111,
+    "Glucose": 5,
+    "BloodPressure": 35,
+    "SkinThickness": 227,
+    "Insulin": 374,
+    "BMI": 11,
+    "DiabetesPedigreeFunction": 0,
+    "Age": 0
+  },
+  "zeros_por_atributo_pct": {
+    "Pregnancies": 14.5,
+    "Glucose": 0.7,
+    "BloodPressure": 4.6,
+    "SkinThickness": 29.6,
+    "Insulin": 48.7,
+    "BMI": 1.4,
+    "DiabetesPedigreeFunction": 0.0,
+    "Age": 0.0
+  },
+  "descritivas": {
+    "Pregnancies": {
+      "count": 768.0,
+      "mean": 3.845,
+      "std": 3.37,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 3.0,
+      "75%": 6.0,
+      "max": 17.0
+    },
+    "Glucose": {
+      "count": 768.0,
+      "mean": 120.895,
+      "std": 31.973,
+      "min": 0.0,
+      "25%": 99.0,
+      "50%": 117.0,
+      "75%": 140.25,
+      "max": 199.0
+    },
+    "BloodPressure": {
+      "count": 768.0,
+      "mean": 69.105,
+      "std": 19.356,
+      "min": 0.0,
+      "25%": 62.0,
+      "50%": 72.0,
+      "75%": 80.0,
+      "max": 122.0
+    },
+    "SkinThickness": {
+      "count": 768.0,
+      "mean": 20.536,
+      "std": 15.952,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 23.0,
+      "75%": 32.0,
+      "max": 99.0
+    },
+    "Insulin": {
+      "count": 768.0,
+      "mean": 79.799,
+      "std": 115.244,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 30.5,
+      "75%": 127.25,
+      "max": 846.0
+    },
+    "BMI": {
+      "count": 768.0,
+      "mean": 31.993,
+      "std": 7.884,
+      "min": 0.0,
+      "25%": 27.3,
+      "50%": 32.0,
+      "75%": 36.6,
+      "max": 67.1
+    },
+    "DiabetesPedigreeFunction": {
+      "count": 768.0,
+      "mean": 0.472,
+      "std": 0.331,
+      "min": 0.078,
+      "25%": 0.244,
+      "50%": 0.372,
+      "75%": 0.626,
+      "max": 2.42
+    },
+    "Age": {
+      "count": 768.0,
+      "mean": 33.241,
+      "std": 11.76,
+      "min": 21.0,
+      "25%": 24.0,
+      "50%": 29.0,
+      "75%": 41.0,
+      "max": 81.0
+    }
+  }
+}

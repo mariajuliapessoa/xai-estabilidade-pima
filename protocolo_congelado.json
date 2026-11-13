@@ -1,0 +1,145 @@
+{
+  "data": "2026-11-02T14:09:29+00:00",
+  "hashes": {
+    "config.json": "207ee61b51b1cf70bcc34299f145ec4d984129e6fd369dd37ff714a47bf3f8d6",
+    "xai_estab.py": "2ef71410d96735f883c6560fe84587c3fe1eb1fe82bbea92fa504698d8dfe1fe",
+    "01_preparar_dados.py": "a57950ba16c514e631a4eec41f1550a18ee49ec7988c4f85ab4fd2c29edf8d42",
+    "02_treinar_modelo.py": "83035ba4611c7d0037d18d52ea78bc4714c764af64853f300fe9318c4e66b573",
+    "03_piloto.py": "8c49e5e53d3517972a8592a76fbacf4bdd17bae2ccd9e13d47b3e604d4dae656",
+    "05_executar_condicoes.py": "87bad2602e35b0a77e4d0092a19246a41205ce8530953cf554b16952f7c0e15f",
+    "06_analisar.py": "345c1217827019c808c24dcb935f3f99554cceb81bfc027fb7011eea75321577",
+    "dados": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af"
+  },
+  "versoes": {
+    "python": "3.13.17",
+    "plataforma": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10",
+    "shap": "0.54.1",
+    "lime": "0.2.0.1"
+  },
+  "config": {
+    "_descricao": "Parâmetros do protocolo experimental (Quadro 6 do artigo). Itens em 'decisoes_pendentes' devem ser confirmados antes de congelar o protocolo (script 04).",
+    "dados": {
+      "arquivo": "dados/pima-indians-diabetes.csv",
+      "tem_cabecalho": false,
+      "sha256_esperado": "6bfe5d0f379d17a0e0819b996407e3c09bf80febd4287f2ed212190dfff154af",
+      "colunas": [
+        "Pregnancies",
+        "Glucose",
+        "BloodPressure",
+        "SkinThickness",
+        "Insulin",
+        "BMI",
+        "DiabetesPedigreeFunction",
+        "Age",
+        "Outcome"
+      ],
+      "alvo": "Outcome",
+      "zeros_como_ausentes": [
+        "Glucose",
+        "BloodPressure",
+        "SkinThickness",
+        "Insulin",
+        "BMI"
+      ]
+    },
+    "divisao": {
+      "proporcao_teste": 0.2,
+      "semente": 42
+    },
+    "imputacao": "mediana_do_treino",
+    "modelo": {
+      "semente_referencia": 42,
+      "grade": {
+        "depth": [
+          4,
+          6
+        ],
+        "learning_rate": [
+          0.01,
+          0.03,
+          0.1
+        ],
+        "iterations": [
+          150,
+          300,
+          600
+        ],
+        "l2_leaf_reg": [
+          3
+        ]
+      },
+      "cv_dobras": 5,
+      "cv_semente": 42,
+      "limiar": 0.5
+    },
+    "treeshap": {
+      "feature_perturbation": "tree_path_dependent"
+    },
+    "lime": {
+      "num_samples": 5000,
+      "kernel_width": null,
+      "discretize_continuous": false,
+      "sample_around_instance": true,
+      "feature_selection": "none",
+      "num_features": 8
+    },
+    "perturbacao": {
+      "sigmas": [
+        0.01,
+        0.03,
+        0.05,
+        0.1
+      ],
+      "limite_inferior": "minimo_do_treino",
+      "limite_superior": "maximo_do_treino",
+      "arredondar": [],
+      "semente_base": 1000
+    },
+    "repeticoes": {
+      "M": 100,
+      "K_lime": 30,
+      "semente_base_lime": 5000,
+      "sementes_modelo_C3": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "executar_C3": true
+    },
+    "piloto": {
+      "n_instancias": 20,
+      "grade_M": [
+        10,
+        30,
+        50,
+        100,
+        150
+      ],
+      "tolerancia_relativa": 0.01,
+      "semente_amostra": 7
+    },
+    "analise": {
+      "metrica_primaria": "tau_b",
+      "bootstrap_B": 2000,
+      "semente_bootstrap": 2026,
+      "alfa": 0.05
+    },
+    "n_processos": 2,
+    "decisoes_pendentes": [
+      "Demais itens conforme o texto validado: LIME sem discretização e com amostragem em torno da instância; excesso do LIME = C2b − C1; truncamento pelo mínimo e máximo do treino; C3 executada; fidelidade local apenas como descritor"
+    ],
+    "decisoes_aprovadas_2026_11_02": [
+      "Perturbação sem arredondamento de Pregnancies e Age",
+      "Inclusão de sigma = 0,10",
+      "M = 100",
+      "Grade ampliada (taxa 0,01; 150 iterações)"
+    ]
+  }
+}
